@@ -1,0 +1,78 @@
+.container {
+    font-family: var(--ar);
+    direction: rtl;
+    padding: 20px;
+}
+
+.title {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+/* OrderList styles */
+.orderList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.noOrders {
+    font-size: 1rem;
+    color: #666;
+}
+
+.orderCard {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.orderHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.orderId {
+    margin: 0;
+}
+
+.statusBadge {
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    color: white;
+    font-family: inherit;
+}
+
+/* Status colors */
+.Pending { background: #f39c12; }
+.Preparing { background: #3498db; }
+.OutForDelivery { background: #9b59b6; }
+.Delivered { background: #27ae60; }
+.Cancelled { background: #e74c3c; }
+
+.orderDetails {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.statusUpdate {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.statusLabel {
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.statusSelect {
+    padding: 5px;
+    border-radius: 4px;
+    font-family: inherit;
+}
