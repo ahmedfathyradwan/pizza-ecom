@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* ===== Primary ===== */
+  --primary: #FF6B35;        /* برتقالي بيتزا */
+  --primary-hover: #E85D2D;
+  --primary-light: #FF8A5C;
+
+
+  /* ===== Secondary ===== */
+  --secondary: #2E2E2E;      /* رمادي داكن للعناوين والنصوص الثانوية */
+
+  /* ===== Neutrals ===== */
+  --bg-main: #FFFFFF;         /* خلفية عامة */
+  --bg-surface: #FFF4EE;      /* Sections / Cards */
+  --text-main: #1F1F1F;       /* نصوص أساسية */
+  --text-muted: #6B6B6B;      /* نصوص ثانوية */
+  --border: #E5E5E5;          /* حدود وخطوط */
+
+  /* ===== Accent ===== */
+  --accent: #2E7D32;          /* أخضر ريحان خفيف */
+  
+  /* ===== Feedback ===== */
+  --success: #27AE60;         /* أخضر */
+  --danger: #E74C3C;          /* أحمر */
+
+  /* ===== Gradient ===== */
+  --gradient-primary: linear-gradient(135deg, #FF6B35 0%, #E85D2D 100%);
+
+  /* Display */
+  --fs-xl: clamp(4rem, 8vw, 6rem);
+
+  /* Headings */
+  --fs-lg: clamp(3rem, 6vw, 4.2rem);
+  --fs-md: clamp(2rem, 4vw, 3rem);
+  --fs-sm: clamp(1.8rem, 3vw, 2rem);
+
+  /* Body */
+  --fs-body: clamp(1.5rem, 1.8vw, 1.8rem);
+
+  /* Small / UI */
+  --fs-xs: clamp(1.3rem, 1.5vw, 1.6rem);
+  --fs-xxs: clamp(1rem, 1.2vw, 1.3rem);
+
+  --shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  --br-f :50px;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--ar), sans-serif;
+  color: var(--text-main);
+  background: linear-gradient( 135deg, #ffdcc2 0%,#ffecde 50%, #ffdcc2 100%);
+  width: 100%;
+  direction: rtl;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.en {
+  font-family: var(--en), sans-serif;
+}
+
+/* Typography */
+
+h1 {
+  font-size: var(--fs-xl);
+}
+
+h2 {
+  font-size: var(--fs-lg);
+}
+
+h3 {
+  font-size: var(--fs-md);
+}
+
+h4 {
+  font-size: var(--fs-sm);
+}
+
+p {
+  font-size: var(--fs-body);
+}
+
+small {
+  font-size: var(--fs-xs);
+}
+
+.caption {
+  font-size: var(--fs-xxs);
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+  padding: 1rem 1.5rem;
+  background: var(--primary);
+  color: var(--bg-main);
+  margin-right: -1rem;
+  font-size: var(--fs-body);
+  font-family: var(--ar);
+  font-weight: 600;
+}
+
+
+@media (min-width: 450px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 1000px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}

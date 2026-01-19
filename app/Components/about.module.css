@@ -1,0 +1,18 @@
+.aboutCont {
+  padding: 5rem 2rem 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.aboutCont h2 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.aboutCont p {
+  color: var(--text-main);
+  font-weight: 600;
+  text-align: center;
+}
