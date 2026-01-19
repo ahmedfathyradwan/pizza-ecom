@@ -22,7 +22,7 @@ export default function Home() {
           </div>
 
           <div className={styles.heroImg}>
-            <Image src="/hero.png" width={300} height={300} alt="Pizza hero" priority />
+            <Image src="/hero.webp" width={300} height={300} alt="Pizza hero" priority />
           </div>
           <div className={styles.heroText}>
             <h3 className={styles.spa}>بيتزا</h3>
