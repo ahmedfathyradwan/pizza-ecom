@@ -1,0 +1,87 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(uuid())
+  username  String   @unique
+  password  String
+  role      String   @default("admin") // admin, manager
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Category {
+  id        String    @id @default(uuid())
+  name      String    @unique // بيتزا, مشويات, etc.
+  products  Product[]
+  createdAt DateTime  @default(now())
+}
+
+model Product {
+  id          String   @id @default(uuid())
+  title       String
+  description String
+  image       String
+  categoryId  String
+  category    Category @relation(fields: [categoryId], references: [id])
+  prices      String // Stored as JSON string: {"small": 80, "medium": 110, "large": 140}
+  isAvailable Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Extra {
+  id    String @id @default(uuid())
+  name  String
+  price Float
+}
+
+model Order {
+  id            String      @id @default(uuid())
+  customerName  String
+  phone         String
+  address       String
+  notes         String?     // For customer notes like "No onions"
+  totalAmount   Float
+  status        String      @default("Pending") // Pending, Preparing, OutForDelivery, Delivered, Cancelled
+  items         OrderItem[]
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+}
+
+model OrderItem {
+  id        String @id @default(uuid())
+  orderId   String
+  order     Order  @relation(fields: [orderId], references: [id])
+  title     String // Snapshot of product title
+  size      String?
+  quantity  Int
+  price     Float  // Price at time of order
+  addons    String // Snapshot of addons names/prices
+}
+
+model CartItem {
+  id          Int      @id @default(autoincrement())
+  sessionId   String
+  pizzaId     Int      
+  title       String   
+  image       String?
+  size        String   
+  quantity    Int      @default(1)
+  basePrice   Float    
+  addons      String   @default("[]") 
+  totalPrice  Float    
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([sessionId])
+}
