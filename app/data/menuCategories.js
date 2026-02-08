@@ -3,7 +3,7 @@ const menuCategories = [
       id: "pizza",
       title: "البيتزا",
       link: "/menu/pizza",
-      img: "/categories/pizza.png",
+      img: "/categories/1.png",
     },
     {
       id: "pasta",

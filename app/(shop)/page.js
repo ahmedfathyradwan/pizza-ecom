@@ -6,6 +6,7 @@ import Contact from "../Components/Contact";
 import Image from "next/image";
 import Link from "next/link";
 import CirclesLottie from "../Components/CirclesLottie"
+import OffersSection from "../Components/OffersSection";
 
 export default function Home() {
   return (
@@ -44,6 +45,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <OffersSection />
         <Menu />
         <About />
         <Contact />
