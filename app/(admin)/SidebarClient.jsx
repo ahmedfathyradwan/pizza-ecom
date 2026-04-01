@@ -14,16 +14,16 @@ export default function Sidebar() {
         <aside className={styles.sidebar}>
             {/* <h2 className={styles.title}>لوحة التحكم</h2> */}
                 <Link href="/dashboard" className={styles.link}>
-                    📊 نظرة عامة
+                     نظرة عامة
                 </Link>
                 <Link href="/dashboard/products" className={styles.link}>
-                    🍕 المنتجات
+                    المنتجات
                 </Link>
                 <Link href="/dashboard/orders" className={styles.link}>
-                    📝 الطلبات
+                     الطلبات
                 </Link>
                 <Link href="/" className={styles.back}>
-                    ⬅️ العودة للمتجر
+                     العودة للمتجر
                 </Link>
         </aside>
     );

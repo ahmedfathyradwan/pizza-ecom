@@ -26,6 +26,9 @@
     "three-stdlib": "^2.36.1",
     "uuid": "^13.0.0"
   },
+  "prisma": {
+    "seed": "node prisma/seed.js"
+  },
   "devDependencies": {
     "eslint": "^9",
     "eslint-config-next": "16.0.10"
